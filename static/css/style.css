@@ -3,11 +3,14 @@ body{
 	background-color: #00a5be;
 	font-family: system-ui;
 	overflow-x: hidden;
+	background-image: url(../img/asset-red.svg);
+	background-repeat: no-repeat;
+	background-position: left 100px top;
 }
 
 .grid{
 	position: relative;
-	z-index: 2;
+	z-index: 3;
 	display: grid;
 	height: calc(100vh + 8em);
 	padding: 1em;
@@ -183,11 +186,22 @@ body{
 }
 
 .character-name{
+	position: relative;
 	font-size: 30px;
+}
+
+.placeholder-container{
+	position: fixed;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }
 
 .character-name-placeholder{
 	position: absolute;
+	display: flex;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -196,7 +210,6 @@ body{
 	color: rgba(0,0,0,.3);
 	z-index: 1;
 	text-transform: uppercase;
-	display: flex;
 	justify-content: center;
 	align-items: center;
 	white-space: nowrap;
@@ -221,16 +234,6 @@ body{
 		position: relative;
 		display: inline-flex;
 	}
-	.character-name h2::after{
-		content: "";
-		width: 87px;
-		height: 6px;
-		background-color: #F7391C;
-		display: inline-flex;
-		position: absolute;
-		left: calc(100% + 5px);
-		top: calc(50% + 3px);
-	}
 
 	.character-labels{
 		grid-area: labels;
@@ -242,8 +245,16 @@ body{
 } */
 
 @media screen and (max-width:1024px){
+	body{
+		background-position: left 50px top;
+	}
+	.character-name-placeholder{
+		transform: rotate(270deg);
+		font-size: 300px;
+	}
 	.grid{
 		height: auto;
+		overflow: hidden;
 		column-gap: 1em;
 		width: calc(100vw - 2em);
 		margin: 0 auto;
