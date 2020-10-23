@@ -5,8 +5,9 @@ export default class Character{
 		this.status = status
 		this.gender = gender
 		this.species = species
-		this.$characterImageContainer = document.querySelector('#character-image-container')
 		this.$characterNameContainer = document.querySelector('#character-name-container')
+		this.$characterImageContainer = document.querySelector('#character-image-container')
+		this.$characterNamePlaceholder = document.querySelector('#character-name-placeholder')
 		this.$characterDescriptionContainer = document.querySelector('#character-description-container')
 		this.render()
 	}
@@ -30,8 +31,9 @@ export default class Character{
 		`
 	}
 	render(){
-		this.$characterImageContainer.innerHTML = this.buildImage()
+		this.$characterNamePlaceholder.innerHTML = this.name
 		this.$characterNameContainer.innerHTML = this.buildName()
+		this.$characterImageContainer.innerHTML = this.buildImage()
 		this.$characterDescriptionContainer.innerHTML = this.buildDescription()
 	}
 }

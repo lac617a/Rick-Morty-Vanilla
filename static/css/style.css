@@ -2,9 +2,12 @@ body{
 	margin: 0;
 	background-color: #00a5be;
 	font-family: system-ui;
+	overflow-x: hidden;
 }
 
 .grid{
+	position: relative;
+	z-index: 2;
 	display: grid;
 	height: calc(100vh + 8em);
 	padding: 1em;
@@ -31,6 +34,7 @@ body{
 }
 
 .arrow{
+	user-select: none;
 	cursor: pointer;
 	grid-area: arrow;
 	background-image: url(../img/arrow.svg);
@@ -182,6 +186,22 @@ body{
 	font-size: 30px;
 }
 
+.character-name-placeholder{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	font-size: 400px;
+	color: rgba(0,0,0,.3);
+	z-index: 1;
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	white-space: nowrap;
+}
+
 /* @media screen and (min-width:1024px){
 	.character-grid{
 		display: grid;
@@ -261,6 +281,7 @@ body{
 		margin-top: 1em;
 		justify-content: center;
 	}
+
 	/* .learn-more{
 		padding-inline-start: 1em;
 		letter-spacing:0;
