@@ -3,9 +3,52 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<link rel="stylesheet" href="./static/css/style.css">
+	<title>Rick and Morty</title>
 </head>
 <body>
-	<script src="/static/js/app.js"></script>
+	<div class="grid">
+		<span class="asset top">
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<span class="line"></span>
+		</span>
+		<img class="logo" width="280px" src="./static/img/logo@2x.png" alt="logo">
+		<div class="social">
+			<a href="#">
+				<img src="./static/img/instagram.svg" alt="">
+			</a>
+			<a href="#">
+				<img src="./static/img/facebook.svg" alt="">
+			</a>
+			<a href="#">
+				<img src="./static/img/twitter.svg" alt="">
+			</a>
+		</div>
+		<div class="navigation name">
+			<a href="#">Name</a>
+		</div>
+		<div id="character-name-container" class="character-name-container"></div>
+		<div id="character-image-container" class="character-image-container"></div>
+		<div class="navigation about">
+			<a href="#">About</a>
+		</div>
+		<div id="character-description-container" class="character-description-container"></div>
+		<span class="asset bottom">
+			<span class="line"></span>
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<span class="dot"></span>
+		</span>
+		<div class="character-text-container">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, voluptatum earum necessitatibus quia minus natus magni veniam! Mollitia sed rem, obcaecati assumenda, nostrum, eveniet eum maxime modi totam excepturi perferendis.</p>
+		</div>
+		<div class="learn-more">
+			<span>Learn more</span>
+		</div>
+		<div class="arrow" id="load-next"></div>
+	</div>
+	<script type="module" src="./static/js/app.js"></script>
 </body>
 </html>
