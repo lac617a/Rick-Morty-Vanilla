@@ -1,9 +1,10 @@
 import API from './api.js';
 import Character from './character.js'
 const URL = 'https://rickandmortyapi.com/api/'
+// const URL = 'https://apionepiece.herokuapp.com/api/'
 const api = new API(URL);
 
-let currentCharacter = 4
+let currentCharacter = 1
 const $loadNext = document.querySelector('#load-next')
 
 $loadNext.addEventListener('click',async()=>{
